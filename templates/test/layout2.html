@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+	<meta charset="UTF-8">
+	<title>布局页二</title>
+	<link rel="stylesheet" type="text/css" href="/{{.Theme}}/css/main.css">
+</head>
+<body>
+	<div class="page">
+		<div class="nav">
+			<div class="logo">
+				<a href="/"><img src="/img/logo.png"></a>
+			</div>
+			<ul>
+				<li>布局二</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div id="container">
+			<h2>布局2</h2>
+
+			<div>
+				{{yield}}
+			</div>
+		</div>
+		<div id="footer">
+			<hr/>
+			版权所有 @ 2014
+		</div>
+	</div>
+</body>
+</html>

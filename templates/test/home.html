@@ -1,0 +1,33 @@
+<div class="main">
+<h4>视图：{{current}}</h4>
+
+<h5>
+{{.title}}-HTML编码测试999
+</h5>
+<h4>密码哈希测试</h4>
+<ul>
+{{range .pwdlist}}
+<li>{{.}}</li>
+{{end}}
+</ul>
+<p>
+{{.msg | raw}} 
+</p>
+
+<div >
+<h4>用户-{{.User.Username}}</h4>
+<ul>
+<li>ID:{{.User.Id}}</li>
+<li>密码:{{.User.Password}}</li>
+<li>邮件:{{.User.Email}}</li>
+<li>创建时间:{{.User.CreatedTime}}->{{.User.CreatedTime|formatTime}}</li>
+<li>创建时间(unix):{{.User.CreatedAt}}(formatUnitTime:{{.User.CreatedAt|formatUnixTime}},formatUnitNano:{{.User.CreatedAt|formatUnixNano}}</li>
+<li>更新时间:{{.User.UpdatedTime|formatTime}}</li>
+</ul>
+</div>
+</div>
+{{template "sidebar" .}}
+<div class="clear"></div>
+
+
+

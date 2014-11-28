@@ -1,0 +1,47 @@
+<!DOCTYPE>
+{{$site:= call .mons.site}}
+<html>
+<head>
+  <title>
+   {{$site.Name}}
+ </title>
+ <meta name="description" content="{{$site.Description}}" />
+ <link href="/{{.Theme}}/css/bootstrap.css" rel="stylesheet" />
+ <link href="/{{.Theme}}/css/mystyle.css" rel="stylesheet" />
+ <link href="/{{.Theme}}/css/yi_index.css" rel="stylesheet" />
+ <script src="/{{.Theme}}/js/jquery-1.10.2.js"></script>
+</head>
+<body>
+  <div class="top">
+    <div class="container">
+      <div class="pull-left logo">
+        <a href="/"> <img src="/{{.Theme}}/img/logo.png" /></a>
+      </div>
+      <p class="pull-right top-right">
+       {{if .IsAuthenticated}}
+       欢迎 [{{.Login.Username}}] | <a href="/logout">退出</a>
+       {{else}}
+       <a href="/register">注册</a> | <a href="/login">登录</a>
+       {{end}}
+     </p>
+   </div>
+ </div>
+ <div class="menu">
+  <div class="container">
+    {{template "menu" .}}
+  </div>
+</div>
+
+{{yield}}
+
+<div class="footer">
+  <div class="container text-center">
+    <p>中誉通信有限公司 版权所有 备案号：冀ICP备05007564号 </p>
+    <p>电话 ： 0335-7060000  传真 ： 0335-7060000-304  邮编 ： 066000 </p>
+    <p>地址 ： 秦皇岛经济技术开发区数谷产业基地洋河道17座 </p>
+
+  </div>
+
+</div>
+</body>
+</html>

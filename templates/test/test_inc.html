@@ -1,0 +1,13 @@
+
+{{template "common/header" .}}
+
+<h4>test.html</h4>
+这是另一个测试页面
+<h5>
+	绑定对象{{current}}
+</h5>
+{{.data.User.Username}}
+{{template "user" .data.User}}
+
+{{template "common/footer" .data}}
+

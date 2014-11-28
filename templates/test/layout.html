@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title>{{.Title}} - MONS</title>
+    <link rel="stylesheet" type="text/css" href="/{{.Theme}}/css/main.css">
+    {{template "head" .}}
+</head>
+<body>
+    <div class="page">
+        <div class="nav">
+            <div class="logo">
+                <a href="/"><img src="/{{.Theme}}/img/logo.png"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="/ctx">应用程序上下文</a></li>
+                <li><a href="/admin">控制中心</a></li>
+           <!--      <li><a href="/t">无布局-模板页test</a></li>
+                <li><a href="/t1">布局一-模板页test(opt)</a></li>
+                <li><a href="/t2/test1">布局二-模板页test1</a></li> -->
+             <!--    <li><a href="/t2/test3">布局二-模板页test3</a></li>
+                <li><a href="/demo.html">静态页</a></li>
+                <li><a href="/json">json页</a></li> -->
+                <li><a href="/hello">频道页</a></li>
+            </ul>
+            <ul class="login">
+                {{if .IsAuthenticated}}
+                <li>欢迎 [{{.Login.Username}}]</li>
+                <li><a href="/logout">退出</a></li>
+                {{else}}
+                <li><a href="/register">注册</a></li>
+                <li><a href="/login">登录</a></li>
+                {{end}}
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div id="container">
+            <h2>布局1-{{.Theme}}-{{.Template}}</h2>
+            {{yield}}
+        </div>
+        <div id="footer">
+            <hr/>
+            版权所有 @ 2014
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{{define "menu"}}
+{{$menu:= call .mons.menu}}
+<ul>
+	<li class="nav-first"><a href="/">通用函数({{$menu.Records}})</a></li>
+	{{range  $menu.Posts}}
+	<li><a href="{{.UrlName}}">{{.Title}}</a></li>
+	{{else}}
+	<li>*没有导航菜单</li>
+	{{end}}
+</ul>
+{{end}}

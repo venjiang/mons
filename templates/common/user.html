@@ -1,0 +1,16 @@
+{{define "user"}}
+<ul>
+<li>
+	用户名:{{.Username}}
+</li>
+<li>
+	邮件:{{.Email}}
+</li>
+<li>
+	创建时间:{{.CreatedTime|formatTime}}
+</li>
+<li>
+	创建时间(长整型):{{.CreatedAt}}->{{.CreatedAt|formatUnixNano}}
+</li>
+</ul>
+{{end}}

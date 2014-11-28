@@ -1,0 +1,18 @@
+
+
+
+<div class="main box">
+	<h4>视图：{{current}}</h4>
+
+	<h5>
+		{{.title}}-HTML编码测试
+	</h5>
+	<p>
+		{{.msg | raw}} 
+	</p>
+</div>
+{{template "sidebar" .}}
+<div class="clear"></div>
+
+
+

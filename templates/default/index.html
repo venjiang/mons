@@ -1,0 +1,160 @@
+    <div class="container">
+    	<div class="situation span4">
+    		<h4><a href="#" class="c-black">最新动态</a></h4>
+    		<ul class="u-m0">
+    			<li><a href="News1.aspx">中国煤炭使用将达峰值</a></li>
+    			<li><a href="News2.aspx">山西酝酿煤炭救市新政</a></li>
+    			<li><a href="News3.aspx">山西煤炭市场分析</a></li>
+    			<li><a href="News4.aspx">山西取消降低部分涉煤收费 平均降低幅度20%</a></li>
+    			<li><a href="News5.aspx">今年中国煤制天然气将冲刺百亿方</a></li>
+    			<li><a href="News6.aspx">煤炭市场依旧“寒气逼人”</a></li>
+    			<li><a href="News7.aspx">石家庄市煤炭市场需求近期疲软</a></li>
+    			<li><a href="News8.aspx">煤炭开采:需求低迷,煤价继续探底</a></li>
+    			<li><a href="News9.aspx">煤炭供应过剩千万吨 全球将有更多煤矿关闭</a></li>     
+    			<li><a href="News10.aspx">下半年煤炭运量或略增</a></li>
+    			<li><a href="News11.aspx">需求持续低迷 动力煤难改下跌趋势</a></li>
+    			<li><a href="News12.aspx">煤电需求低位增长 发电企业利润大增</a></li>
+    			<li><a href="News13.aspx">焦炭跌跌不休 供求平衡任重道远</a></li>
+    			<li><a href="News14.aspx">煤炭进口量激增带动煤质检测需求增长</a></li>
+    		</ul>
+    	</div>
+
+    	<div class="map-box">
+    		<h3>全国煤炭交易状况概览 {{raw "<i>帮助</i>函数" }} {{call .funcs.fn "函数调用"}}</h3>
+    		<p>
+                {{.mons.query_all}}
+                {{$art:=call .mons.article 6}}
+                文章:{{if $art}}{{$art.Content|raw}}{{else}}没有文章{{end}}
+                <h4>{{call .funcs.fn1 "参数一" "参数二" "参数三"}}</h4>
+                <h5>{{call .funcs.json}}</h5>
+                {{$menu:= call .mons.menu 3}}
+                {{range $menu.Posts}}
+                <li><a href="/{{.UrlName}}">{{.Title}}</a></li>
+                {{else}}
+                <li>*没有导航菜单</li>
+                {{end}}
+            </p>
+            {{template "tpl" }}
+            <div class="btn-table">
+
+            </div>
+
+
+            <div class="map">
+             <dl id="gmap">
+                <dd><a id="xj" title="新疆" href="javascript:void(0)">新疆</a></dd>
+                <dd><a id="xz" title="西藏" href="javascript:void(0)">西藏</a></dd>
+                <dd><a id="qh" title="青海" href="javascript:void(0)">青海</a></dd>
+                <dd><a id="gs" title="甘肃" href="javascript:void(0)">甘肃</a></dd>
+                <dd ation="Default-Neimenggu.aspx"><a id="lmg" title="内蒙古" href="javascript:void(0)">内蒙古</a></dd>
+                <dd><a id="hlj" title="黑龙江" href="javascript:void(0)">黑龙江</a></dd>
+                <dd><a id="jl" title="吉林" href="javascript:void(0)">吉林</a></dd>
+                <dd><a id="ln" title="辽宁" href="javascript:void(0)">辽宁</a></dd>
+                <dd><a id="sd" title="山东" href="javascript:void(0)">山东</a></dd>
+                <dd ation="Default-hebei.aspx"><a id="hb" title="河北" href="javascript:void(0)">河北</a></dd>
+                <dd ation="Default-shanxi.aspx"><a id="sx" title="山西" href="javascript:void(0)">山西</a></dd>
+                <dd><a id="bj" title="北京" href="javascript:void(0)">北京</a></dd>
+                <dd><a id="tj" title="天津" href="javascript:void(0)">天津</a></dd>
+                <dd><a id="shx" title="陕西" href="javascript:void(0)">陕西</a></dd>
+                <dd><a id="nx" title="宁夏" href="javascript:void(0)">宁夏</a></dd>
+                <dd><a id="hn" title="河南" href="javascript:void(0)">河南</a></dd>
+                <dd><a id="js" title="江苏" href="javascript:void(0)">江苏</a></dd>
+                <dd><a id="ah" title="安徽" href="javascript:void(0)">安徽</a></dd>
+                <dd><a id="sh" title="上海" href="javascript:void(0)">上海</a></dd>
+                <dd><a id="zj" title="浙江" href="javascript:void(0)">浙江</a></dd>
+                <dd><a id="jx" title="江西" href="javascript:void(0)">江西</a></dd>
+                <dd><a id="hj" title="福建" href="javascript:void(0)">福建</a></dd>
+                <dd><a id="gd" title="广东" href="javascript:void(0)">广东</a></dd>
+                <dd><a id="hl" title="海南" href="javascript:void(0)">海南</a></dd>
+                <dd><a id="gx" title="广西" href="javascript:void(0)">广西</a></dd>
+                <dd><a id="gz" title="贵州" href="javascript:void(0)">贵州</a></dd>
+                <dd><a id="yn" title="云南" href="javascript:void(0)">云南</a></dd>
+                <dd><a id="sc" title="四川" href="javascript:void(0)">四川</a></dd>
+                <dd><a id="cq" title="重庆" href="javascript:void(0)l">重庆</a></dd>
+                <dd><a id="hun" title="湖南" href="javascript:void(0)">湖南</a></dd>
+                <dd><a id="hub" title="湖北" href="javascript:void(0)">湖北</a></dd>
+                <dd><a id="tw" title="台湾" href="javascript:void(0)">台湾</a></dd>
+            </dl>
+            <div class="map-popup-po shanxi" id="D_sx"  style="display:none">
+                <div class="map-popup">
+                   <p>出煤量：48977.3万吨</p>
+                   <p>销售量：32120.2万吨</p>
+                   <p>铁路运输：27092.2万吨</p>
+                   <p>公路运输：20319.15万吨</p>
+                   <p>坑口价格：288元/吨</p>
+                   <p>销售价格：480元/吨</p>
+               </div>
+               <div class="map-jiao"></div>
+           </div>
+           <div class="map-popup-po mongolia" id="D_lmg" style="display:none" >
+            <div class="map-popup">
+               <p>出煤量：49598.6万吨</p>
+               <p>销售量：49647.7万吨</p>
+               <p>铁路运输：35712.06万吨</p>
+               <p>公路运输：26784.05万吨</p>
+               <p>坑口价格：268.62元/吨</p>
+               <p>销售价格：407元/吨</p>
+           </div>
+           <div class="map-jiao"></div>
+       </div>
+       <div class="map-popup-po hebei" id="D_hb"  style="display:none">
+        <div class="map-popup">
+           <p>出煤量：4267.01万吨</p>
+           <p>销售量：5871.44万吨</p>
+           <p>铁路运输：1715.47万吨</p>
+           <p>公路运输：784万吨</p>
+           <p>坑口价格：205.54元/吨</p>
+           <p>销售价格：342.77元/吨</p>
+       </div>
+       <div class="map-jiao"></div>
+   </div>
+</div>
+</div>
+<script>
+  var isOpen = false;
+  var currOpenningDiv = "";
+  $(".map").click(function () {
+
+     $(".map-popup-po").attr("style", "display:none");
+     isOpen = false;
+ });
+
+  $("#gmap>dd").click(function () {
+     $(".map-popup-po").attr("style", "display:none");
+     var action = $(this).attr("ation");
+     if (action) {
+        if($("#iframe1").attr("src") !=action)
+           $("#iframe1").attr("src", action);
+   }
+   var aid = $(this).children("a").attr("id");
+   aid = "#D_" + aid;
+   var s = $(aid);
+   if (s) {
+    if (isOpen) {
+       if (aid == currOpenningDiv) {
+          isOpen = false;
+      } else {
+          $(s).attr("style", "");
+          isOpen = true;
+          currOpenningDiv = aid;
+      }
+  } else {
+   $(s).attr("style", "");
+   isOpen = true;
+   currOpenningDiv = aid;
+}
+} else {
+    isOpen = false;
+}
+event.cancelBubble = true;
+
+});
+</script>
+  <!--   	<iframe src="Default-Neimenggu.aspx" scrolling="no" frameborder="0" width="960" height="290" id="iframe1"></iframe>
+    	<div class="Default-ifr-gangkou">
+    		<iframe src="http://imcec.cn/led/gangkou.asp" scrolling="no" frameborder="0" width="960" height="180"></iframe>
+    	</div> -->
+
+    </div>
+
+

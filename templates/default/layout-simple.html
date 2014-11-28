@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>{{.Title}} - MONS</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="/admin/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="/admin/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/admin/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="/admin/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="/admin/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="/admin/css/ace.min.css" />
+		<link rel="stylesheet" href="/admin/css/ace-responsive.min.css" />
+		<link rel="stylesheet" href="/admin/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="/admin/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="/admin/js/ace-extra.min.js"></script>
+	</head>
+
+	<body class="login-layout">
+		<div class="main-container container-fluid">
+			<div class="main-content">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="login-container">
+							<div class="row-fluid">
+								<div class="center">
+									<h1>
+										<i class="icon-leaf green"></i>
+										<span class="red">MONS</span>
+										<span class="white">内容管理系统</span>
+									</h1>
+									<h4 class="blue">&copy; venjiang.com</h4>
+								</div>
+							</div>
+
+							<div class="space-6"></div>
+							{{yield}}
+							
+						</div>
+					</div><!-- /.span -->
+				</div><!-- /.row-fluid -->
+			</div>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='/admin/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='/admin/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='/admin/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="/admin/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!-- ace scripts -->
+
+		<script src="/admin/js/ace-elements.min.js"></script>
+		<script src="/admin/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			function show_box(id) {
+			 jQuery('.widget-box.visible').removeClass('visible');
+			 jQuery('#'+id).addClass('visible');
+			}
+		</script>
+	</body>
+</html>

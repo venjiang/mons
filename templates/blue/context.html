@@ -1,0 +1,7 @@
+<h3>blue模板-Context 上下文测试</h3>
+{{.ctx}}-{{.a}}
+<h4>当前上下文</h4>
+{{.}}
+<h4>用户模板</h4>
+{{.user.Username}}
+{{template "user" .user}}
