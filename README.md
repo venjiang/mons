@@ -18,11 +18,14 @@ mons
 	+ go get github.com/codegangsta/gin (%GOPATH%/bin下会自动加入gin)
 	+ cd path/mons
 	+ gin -a 8080
-- GOPM 包管理
-	+ go get -u github.com/gpmgo/gopm
-	+ 运行 gopm run main.go
-	+ 构建 gopm build
-	+ 生成包管理文件 gopm gen
+- GOM 包管理
+	+ go get -u github.com/mattn/gom
+	+ gom gen gomfile
+	+ gom install [options]   : Install bundled packages into _vendor 
+ 	+ gom build   [options]   : Build with _vendor packages
+    directory, by default.
+   + gom run server.go
+   
 
 ## 扩展功能
 - 内部函数调用
