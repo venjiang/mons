@@ -60,8 +60,6 @@ func main() {
 	m.Use(CreateContext())
 	// 中间件-核心服务
 	m.Use(middlewares.CoreService())
-	// m.Use(middlewares.Db(Config.Db.Driver, Config.Db.Source, gorp.PostgresDialect{}))
-	// m.Use(middlewares.Db("postgres", "postgres://dev:7060000@localhost/mons?sslmode=disable", gorp.PostgresDialect{}))
 	// 中间件-公用服务
 	m.Use(middlewares.Common())
 	// 日志服务
